@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const App: React.FC = () => {
   const [results, setResults] = useState<string[]>([]);
-  const apiKey = process.env.GOOGLE_API_KEY;
+  const apiKey = 'AIzaSyA1TqKRfSIc-j434xD5Vt4UrJDRGc07jkA';
 
   const handleAnalyzeClick = async () => {
     try {
