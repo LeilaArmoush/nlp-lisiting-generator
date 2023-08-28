@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: your-app-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: image-analyser
+  template:
+    metadata:
+      labels:
+        app: image-analyser
+    spec:
+      containers:
+        - name: image-analyser
+          image: gcr.io/symbolic-app-397113/my-docker-image:latest
+          ports:
+            - containerPort: 3000
