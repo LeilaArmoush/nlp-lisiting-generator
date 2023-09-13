@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: your-app-deployment
+  name: listing-image-analyzer
 spec:
   replicas: 1
   selector:
@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: image-analyser
-          image: gcr.io/symbolic-app-397113/my-docker-image:latest
+          image: gcr.io/k8s-minikube/kicbase:v0.0.40:latest
           ports:
             - containerPort: 3000
